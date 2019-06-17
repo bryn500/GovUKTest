@@ -4,6 +4,10 @@
 <p class="govuk-body">@Model.Message</p>
 
 <form asp-controller="Home" asp-action="Index" method="post">
+    @* Todo:
+        get summary working with client side validation
+        get govuk-form-group--error attached to form group on error
+    *@
     <partial name="_ValidationSummary" model="ViewData.ModelState" />
 
     <div class="govuk-form-group">
