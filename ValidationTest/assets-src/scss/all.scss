@@ -1,0 +1,13 @@
+﻿@import "node_modules/govuk-frontend/all";
+
+.input-validation-error {
+    @extend .govuk-input--error;
+}
+
+.field-validation-error {
+    @extend .govuk-error-message;
+}
+
+.validation-summary-valid {
+    display: none;
+}

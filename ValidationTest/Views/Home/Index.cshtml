@@ -1,0 +1,23 @@
+﻿@model HomeViewModel
+
+<h1 class="govuk-heading-xl">Home</h1>
+<p class="govuk-body">@Model.Message</p>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <partial name="_ValidationSummary" model="ViewData.ModelState" />
+
+    <div class="govuk-form-group">
+        <label asp-for="Message" class="govuk-label">
+            Message
+        </label>
+        <span asp-validation-for="Message" class="text-danger"></span>
+        <input asp-for="Message" class="govuk-input govuk-input--width-10" />
+    </div>
+
+    <button type="submit" class="govuk-button">Submit</button>
+</form>
+
+<script>
+    // this should fail due to csp
+    alert('test');
+</script>

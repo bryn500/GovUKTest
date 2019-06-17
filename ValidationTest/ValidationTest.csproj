@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>806af09c-4395-4e92-8cc9-dc9956868d6b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\css\all.min.js" />
+    <Content Remove="wwwroot\assets\css\crit.min.js" />
+    <Content Remove="wwwroot\assets\css\critical.min.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.9.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\css\" />
+    <Folder Include="wwwroot\assets\js\" />
+  </ItemGroup>
+
+</Project>
