@@ -15,7 +15,6 @@ namespace ValidationTest.Controllers
     {
         private readonly EmailConfig _emailConfig;
 
-        // Get dependencies setup in startup.cs by referencing them in constructors
         public HomeController(IOptions<EmailConfig> emailConfig)
         {
             _emailConfig = emailConfig.Value;
